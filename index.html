@@ -10,7 +10,6 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      /* Ilus abstraktne gradient taust */
       background: linear-gradient(135deg, #667eea, #764ba2, #89f7fe, #66a6ff);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
@@ -29,80 +28,132 @@
     header {
       padding: 25px;
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
       color: white;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      letter-spacing: 1px;
     }
 
     main {
       flex: 1;
       padding: 40px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 25px;
     }
 
-.card {
-  backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.75); /* heledam taust */
-  border-radius: 18px;
-  padding: 20px;
-  border: 1px solid rgba(255,255,255,0.25);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #111; /* must tekst */
-}
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    .card {
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 18px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #111;
     }
 
-.card h2,
-.discord,
-.rank,
-.warnings h3,
-.warnings li {
-  color: #111; /* kõik tekst mustaks */
-}
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.25);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.6rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .warnings h3 {
+      font-size: 1.1rem;
+      margin: 12px 0 10px;
+      color: #222;
+    }
+
+    .warnings ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .warnings li {
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.3);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .warnings li span {
+      display: block;
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 4px;
+    }
   </style>
 </head>
 <body>
   <header>Solara Roleplay – Admin Karistused</header>
 
   <main>
-    <!-- Lisa adminid käsitsi -->
+    <!-- Admin kaart -->
     <div class="card">
       <h2>7Seven</h2>
-      <div class="discord">Discord: 7evendidit</div>
-      <div class="rank">Rank: Moderaator</div>
+      <div class="meta">
+        <span>💬 Discord: <strong>7evendidit</strong></span>
+        <span>⭐ Rank: <strong>Moderaator</strong></span>
+      </div>
       <div class="warnings">
         <h3>Hoiatused</h3>
         <ul>
-          <li>Copbait ja adminina mitte eeskujulik käitumine – 14.09.2025
-Karistus aegub 28.09.2025 </li>
+          <li>
+            Copbait ja adminina mitte eeskujulik käitumine  
+            <span>Antud: 14.09.2025 – Aegub: 28.09.2025</span>
+          </li>
+          <li>
+            Admin Abuse (Revive abuse)  
+            <span>Antud: 14.09.2025 – Aegub: 28.09.2025</span>
+          </li>
         </ul>
-           <li>Admin Abuse (Revive abuse) – 14.09.2025
-Karistus aegub 28.09.2025 </li>
       </div>
     </div>
 
+    <!-- Admin kaart -->
     <div class="card">
       <h2>Pets</h2>
-      <div class="discord">Discord: Natsike</div>
-      <div class="rank">Rank: Katse-Moderator</div>
+      <div class="meta">
+        <span>💬 Discord: <strong>Natsike</strong></span>
+        <span>⭐ Rank: <strong>Katse-Moderator</strong></span>
+      </div>
       <div class="warnings">
         <h3>Hoiatused</h3>
         <ul>
-          <li> – 14.09.2025</li>
+          <li>
+            –  
+            <span>Antud: 14.09.2025</span>
+          </li>
         </ul>
       </div>
     </div>
   </main>
 </body>
 </html>
-
-
-
-
